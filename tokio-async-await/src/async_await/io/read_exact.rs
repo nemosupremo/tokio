@@ -6,7 +6,8 @@ use futures_util::try_ready;
 
 use std::io;
 use std::marker::Unpin;
-use std::mem::{self, PinMut};
+use std::mem::{self};
+use core::pin::PinMut;
 
 /// A future which can be used to read exactly enough bytes to fill a buffer.
 #[derive(Debug)]
